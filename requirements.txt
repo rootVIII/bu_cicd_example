@@ -1,0 +1,8 @@
+Flask
+flask-restx
+Jinja2
+pytz
+PyYAML
+requests
+urllib3
+Werkzeug
