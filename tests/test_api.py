@@ -1,8 +1,8 @@
-from .fixtures import test_api_client
 from json import loads
 from os import listdir
 from os.path import isdir
 from pytest import mark
+from .fixtures import test_api_client
 from .fixtures import config, get_logger
 from .fixtures import AppConfig, get_file_contents
 from .fixtures import make_file_name, write_json
