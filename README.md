@@ -2,6 +2,7 @@
 
 
 ##### RUN LOCALLY:
+* place project folder in <code>/var/www/</code> on *NIX systems
 * create/activate a virtual environment in project root
 * <code>pip3 install -r requirements.txt</code>
 * run <code>python3 bu_app.py</code>
