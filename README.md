@@ -1,4 +1,4 @@
-# Flask webapp/API testing application
+# Flask webapp/API testing application for Openshift
 
 
 ##### RUN LOCALLY:
