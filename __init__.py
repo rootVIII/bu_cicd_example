@@ -1,4 +1,4 @@
 #! /usr/bin/python3
 from flask import Flask
 app = Flask(__name__)
-import bu_app
+import wsgi

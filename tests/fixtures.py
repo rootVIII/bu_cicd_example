@@ -1,4 +1,4 @@
-from bu_app import app
+from wsgi import application
 from common.app_config import AppConfig
 from common.config import config
 from common.utils import *
@@ -8,5 +8,5 @@ from pytest import fixture
 
 @fixture
 def test_api_client():
-    app.testing = True
-    return app.test_client()
+    application.testing = True
+    return application.test_client()
