@@ -3,7 +3,6 @@ from flask import Flask, render_template, request, redirect
 from common.config import config
 from bu_api import bu_api_blueprint
 from common.utils import get_logger
-# gunicorn -c gunicorn_config.py wsgi:application
 
 
 log = get_logger(__name__)
@@ -32,4 +31,3 @@ def not_found(error):
 
 if __name__ == '__main__':
     application.run()
-    # app.run(host='0.0.0.0')
