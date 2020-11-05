@@ -9,6 +9,10 @@
 * navigate to http://127.0.0.1:5000
 
 
+##### RUN LOCALLY WITH GUNICORN (0.0.0.0:80):
+gunicorn -c gunicorn_config.py wsgi:application
+
+
 ##### RUN TESTS:
 from project root execute:<br>
 <code>python3 -m pytest -rsA tests/</code>
