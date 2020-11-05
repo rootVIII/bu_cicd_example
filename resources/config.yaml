@@ -1,6 +1,6 @@
 ---
 env: DEV
 company: CORP
-log_path: /var/www/bu_cicd_example/logs/api.log
-file_store: /var/www/bu_cicd_example/file_store/
+log_path: /opt/app-root/src/logs/api.log
+file_store: /opt/app-root/src/file_store/
 ...
