@@ -1,6 +1,6 @@
 ---
 env: DEV
 company: CORP
-log_path: /opt/app-root/src/logs/api.log
-file_store: /opt/app-root/src/file_store/
+log_path: logs/api.log
+file_store: file_store/
 ...
