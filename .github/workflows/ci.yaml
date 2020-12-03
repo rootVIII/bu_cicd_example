@@ -85,3 +85,4 @@ jobs:
           secrets.OC_SERVER_URL }}
 
           oc delete all --selector app=$branchName
+#test change
