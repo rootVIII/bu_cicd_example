@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>{{ company }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/ico" href="{{url_for('static', filename='favicon.ico')}}" />
+    <link rel=stylesheet type=text/css href="{{url_for('static', filename='bootstrap.css')}}">
+    <script src="{{url_for('static', filename='jquery.js')}}" type="text/javascript" defer> </script>
+    <script src="{{url_for('static', filename='bootstrap.min.js')}}" type="text/javascript" defer> </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand" href="{{url_for('index')}}">
+            <h4>
+                {{ company }}
+            </h4>
+        </a>&emsp;&emsp;
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle bg-secondary text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Internal
+                    </a>
+                    <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ api_url }}">API</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav><br><br>
+
+    <div class="container bg-white">
+        <div class="jumbotron">
+            <h1 class="display-4">{{ "" }}</h1>
+            <p class="lead">Welcome to CORP home.</p>
+            <hr class="my-4">
+            <p>Please try our example API.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="{{ api_url }}" role="button">Try API</a>
+            </p>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner bg-secondary">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(124).jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(126).jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(145).jpg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div><br><br>
+
+    <footer class="container-fluid">
+        <nav class="navbar fixed-bottom bg-secondary font-small">
+            <div class="container justify-content-center">
+                <br>
+                <div class="container bg-secondary text-dark text-center">
+                    <script>
+                        var today = new Date();
+                        document.write( "&copy;&emsp; 2019-" );
+                        document.write( today.getFullYear() );
+                        document.write(" {{ company }}")
+                    </script>
+                </div>
+            </div>
+        </nav>
+        <br>
+    </footer>
+
+</body>
+</html>
