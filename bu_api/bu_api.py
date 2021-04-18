@@ -1,10 +1,12 @@
 from flask import request, jsonify
 from flask import Blueprint, make_response
-from flask_restx import Resource, Api, reqparse, fields
+from flask_restx import Resource, Api
 from re import search
 from common.config import config
 from common.utils import get_logger, get_file_contents
 from common.utils import make_file_name, write_json
+from .utils.utils import get_models_parsers
+from .utils.utils import auth_required, get_example_certs
 
 
 # initialize logging:
@@ -26,27 +28,16 @@ api.namespaces = []
 ns = api.namespace('', description='Resources [env: %s]:' % config['env'])
 
 
-get_parser = reqparse.RequestParser()
-get_parser.add_argument(
-    'FileName',
-    type=str,
-    location='headers',
-    required=True
-)
+get_file_parser, post_file_model = get_models_parsers(api)
 
 
-post_file_model = api.model(
-    'admin_update_schema_fields', {
-        'FileData': fields.Raw(required=True),
-    }
-)
-
-
-@ns.route('/get_file_store')
-@api.route('/get_file_store')
+@ns.route('/get-file-store')
+@api.route('/get-file-store')
 @api.doc(responses=response_codes)
-@api.doc(parser=get_parser)
+@api.doc(parser=get_file_parser)
 class GetFileStore(Resource):
+
+    @auth_required
     def get(self):
         try:
             file_name = request.headers['FileName']
@@ -61,10 +52,12 @@ class GetFileStore(Resource):
         return jsonify({file_name: content})
 
 
-@ns.route('/post_file_store')
-@api.route('/post_file_store')
+@ns.route('/post-file-store')
+@api.route('/post-file-store')
 @api.doc(responses=response_codes)
 class PostFileStore(Resource):
+
+    @auth_required
     @api.expect(post_file_model)
     def post(self):
         resp = {'Created': False, 'FileName': 'N/A'}
@@ -85,3 +78,13 @@ class PostFileStore(Resource):
 
         resp['Created'], resp['FileName'] = True, file_name
         return jsonify(resp)
+
+
+@ns.route('/get-example-certificates')
+@api.route('/get-example-certificates')
+@api.doc(responses=response_codes)
+class GetExampleCertificates(Resource):
+
+    @auth_required
+    def get(self):
+        return jsonify(get_example_certs())
