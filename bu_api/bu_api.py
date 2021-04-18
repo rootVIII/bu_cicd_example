@@ -22,7 +22,15 @@ response_codes = {
 
 # API configuration
 bu_api_blueprint = Blueprint('bu_api', __name__, url_prefix='/api/v1')
-api = Api(bu_api_blueprint, doc='/', version='1.0', title='API V1')
+
+auths = {
+    'Basic Auth': {
+        'type': 'basic', 'in': 'header', 'name': 'Authorization'
+    }
+}
+
+api = Api(bu_api_blueprint, doc='/', version='1.0',
+          title='API V1', security='Basic Auth', authorizations=auths)
 
 api.namespaces = []
 ns = api.namespace('', description='Resources [env: %s]:' % config['env'])
