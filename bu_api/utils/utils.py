@@ -65,7 +65,7 @@ PWhqJSwJZor7nIshy6WX9mO/dfM0c0vC6zygP/5/1AON+qyWeNu/N+XjglYueca7
 /ngi+e2P5S6gOKcbx4A2xYz0YMSLKtldm/PSa+LrQQCTK4cqxFQBdjo1j1X7qC8l
 wT7fT4BuDzd89Yb0ehcciOGgTbxPW0XUReq4TKryzvI1E8VbzklLUxQO4UOpQggN
 t+CuwmRczSx3sPaMDg34ZR+TmoRWzx9tsHFCIGuPtA7lMdKikQnVzTjX5h2w1snX
-2qizPLSu""".strip().replace('\n', '')
+2qiz""".strip().replace('\n', '')
 
     cert_2 = """
 MIIDkDCCAngCCQDb0/k1Oex1ODANBgkqhkiG9w0BAQsFADCBiTELMAkGA1UEBhMC
@@ -87,7 +87,7 @@ SjycG6qyvYEWgBIv5dhcy7TNEebJyup6jjSCvQqWMiA1zmUuCf1YM/SQysZvx97l
 yAcIMNkKXDx+jBebXkYfe33iteQCtxsN4ehjUloXONKkLN337uONMBtj+Dqts/e5
 4FNdsjhTWuc0e01gahHKhzqdz0J7h1cRkzgu2Ct/JslT5SyFAW356royk65gbgdR
 /1hXVqNOV7qKD8ohU3vDPW8Pltvr2hwIOWKo4vykhNG3iXX6hrWKhNESul+kqhVP
-5Nwxgg==""".strip().replace('\n', '')
+5Nwxg==""".strip().replace('\n', '')
 
     cert_3 = """
 MIIDYDCCAkgCCQDOPnykxHJNODANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJV
