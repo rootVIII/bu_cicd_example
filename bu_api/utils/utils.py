@@ -22,7 +22,7 @@ def auth_required(funct):
         except Exception as err:
             return make_response(jsonify({'ERROR': str(err)}), 401)
         return funct(*args, **kwargs)
-    return decorated_function()
+    return decorated_function
 
 
 def get_models_parsers(api):
